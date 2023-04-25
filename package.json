@@ -6,7 +6,8 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack --mode development",
-    "start": "cross-env NODE_ENV=development webpack serve --mode development"
+    "start": "cross-env NODE_ENV=development webpack serve --mode development",
+	 "deploy": "gh-pages -d app"
   },
   "keywords": [],
   "author": "Iraes",
@@ -41,5 +42,6 @@
   "dependencies": {
     "focus-visible": "^5.2.0",
     "normalize.css": "^8.0.1"
-  }
+  },
+  "homepage": "https://github.com/Regina1801/Regina1801.webcore.io.git"
 }

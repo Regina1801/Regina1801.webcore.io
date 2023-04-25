@@ -99,7 +99,7 @@ module.exports = {
     //libraryTarget: 'amd'
   },
   devServer: {
-	 //contentBase: './dist',
+	 contentBase: './app',
     open: true,
     compress: true,
     hot: true,
