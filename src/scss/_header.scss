@@ -1,0 +1,111 @@
+.header {
+  background-color: $white;
+  &__upper-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+
+  }
+
+  @media (min-width: 1440px) {
+    display: none;
+  }
+}
+
+.upper-menu {
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__btn {
+    width: 40px;
+    height: 40px;
+
+    &-call,
+    &-chat,
+    &-profile {
+      display: none;
+      @media (min-width: 768px) {
+        display: block;
+      }
+    }
+
+    &-burger {
+      background: center / cover no-repeat url("../img/burger.svg");
+    }
+
+    &-call {
+      background: center / cover no-repeat url("../img/call.svg");
+    }
+
+    &-chat {
+      background: center / cover no-repeat url("../img/chat.svg");
+    }
+
+    &-profile {
+      background: center / cover no-repeat url("../img/profile.svg");
+    }
+
+    &-profile {
+      background: center / cover no-repeat url("../img/profile.svg");
+    }
+
+    &-repair {
+      background: center / cover no-repeat url("../img/repair.svg");
+    }
+
+    &-checkstatus {
+      background: center / cover no-repeat url("../img/checkstatus.svg");
+    }
+  }
+
+  &__left {
+    gap: 20px;
+
+    &-splitter {
+      display: none;
+
+      @media (min-width: 768px) {
+        position: relative;
+        display: block;
+        height: 32px;
+
+        &::before {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          width: 2px;
+          height: 32px;
+          background-color: $light-gray;
+        }
+      }
+    }
+  }
+
+  &__right {
+    &-splitter {
+      position: relative;
+      padding: 0 2px;
+      height: 32px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 50%;
+        width: 2px;
+        height: 32px;
+        background-color: $light-gray;
+      }
+    }
+  }
+
+
+}

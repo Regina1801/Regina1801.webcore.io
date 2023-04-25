@@ -1,0 +1,39 @@
+.repair {
+  &__wrapper {
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px 16px;
+      max-height: 160px;
+    }
+    @media (min-width: 1440px) {
+      grid-template-columns: repeat(4,1fr);
+      gap: 18px 32px;
+      max-height: 160px;
+    }
+  }
+  &__item {
+    height: 160px;
+    @media(min-width: 768px) {
+      width: 224px;
+    }
+    @media(min-width: 1440px) {
+      width: 240px;
+    }
+    &-title {
+      align-self: flex-start;
+      max-width: 165px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -.2px;
+
+      @media (min-width: 768px) {
+        max-width: 150px;
+      }
+    }
+    &-btn {
+      align-self: flex-end;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+.main {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 1180px) {
+    margin: 0 auto;
+    max-width: 1180px;
+  }
+
+  @media (min-width: 1440px) {
+    flex-direction: row;
+    max-width: 1440px;
+  }
+}
+
+.container {
+  margin: 0;
+  padding: 18px 16px;
+
+  @media (min-width: 768px) {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  @media (min-width: 1120px) {
+    padding-right: 30px;
+    padding-left: 30px;
+    max-width: 1180px;
+  }
+}
+
+.read-more {
+  display: none;
+  padding: 7px 7px 7px 25px;
+  border-radius: 6px;
+  background: 7px / 10px no-repeat url("../img/arrow-icon.svg");
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  line-height: 24px;
+  transition:filter .24s ease;
+
+  @media (min-width: 768px) {
+    display: block;
+
+    &:hover {
+      background-color: #fff;
+      filter: drop-shadow( 0 0 1px rgb(0, 225, 255));
+    }
+
+    &:focus  {
+      outline: none;
+    }
+
+    &--open {
+      background: 7px / 10px no-repeat url("../img/top-arrow-icon.svg");
+    }
+  }
+}
+
+.item-btn {
+  width: 40px;
+  height: 40px;
+  background: center no-repeat url('../img/go.svg');
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  background-color: $white;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity .24s ease-in-out;
+
+  &--open {
+    opacity: 0.95;
+    visibility: visible;
+  }
+}
+
+.open {
+  max-height: 100% !important;
+}
+
+.more-box {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
