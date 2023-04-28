@@ -5,12 +5,12 @@
     justify-content: space-between;
   }
 
-  &__wrapper {
-    margin: 0 auto;
+  //&__wrapper {
+    //margin: 0 auto;
 
-  }
+  //}
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1120px) { //
     display: none;
   }
 }
@@ -106,6 +106,4 @@
       }
     }
   }
-
-
 }

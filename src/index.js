@@ -13,10 +13,12 @@ const btnFeedback = document.querySelector('.main-menu__btn-chat');
 const btnCallback = document.querySelector('.main-menu__btn-call');
 const closeModalFeedback = document.querySelector('.modal__feedback-close-btn');
 const closeModalCallback = document.querySelector('.modal__callback-close-btn');
+const openServicesDescr = document.querySelector('.services-description__text');
+const btnReadMoreServices = document.querySelector('.services-description__read-more');
 
 btnCallback.addEventListener("click", function () {
+	removeLeftSidebar();
   modalFeedback.classList.add('visibility-hidden');
-  //modalFeedback.style.display = "none";
   modal.classList.add('modal--open');
   modalCallback.classList.add('modal__callback--open');
   overlay.classList.add('overlay--open');
@@ -24,6 +26,7 @@ btnCallback.addEventListener("click", function () {
 });
 
 btnFeedback.addEventListener("click", function () {
+	removeLeftSidebar();
   modalCallback.classList.add('visibility-hidden');
   modalCallback.style.display = "none";
   modal.classList.add('modal--open');
@@ -34,19 +37,18 @@ btnFeedback.addEventListener("click", function () {
 
 closeModalFeedback.addEventListener("click", function () {
   modal.classList.remove('modal--open');
-  //modalFeedback.classList.remove('modal__feedback--open');
   closeOverlay();
 });
 
 closeModalCallback.addEventListener("click", function () {
   modal.classList.remove('modal--open');
-  //modalCallback.classList.remove('modal__callback--open');
   closeOverlay();
 });
 
 function showLeftSidebar() {
   sidebar.classList.add('sidebar-left--open');
   overlay.classList.add('overlay--open');
+  body.classList.add('disable-scroll');
 }
 
 function removeLeftSidebar() {
@@ -76,6 +78,20 @@ function changeBtn(btn) {
     btn.classList.remove('read-more--open');
     btn.textContent = "Показать все"
   }
+}
+
+btnReadMoreServices.addEventListener('click', () => {
+	btnReadMoreServices.classList.toggle('services-description__read-more--open');
+	openServicesDescr.classList.toggle('open');
+	changeBtnServices();
+});
+
+function changeBtnServices() {
+	if (btnReadMoreServices.innerHTML === "Читать далее") {
+		btnReadMoreServices.innerHTML = "Скрыть";
+	 } else {
+		btnReadMoreServices.innerHTML = "Читать далее";
+	 }
 }
 
 document.addEventListener('click', (e) => {

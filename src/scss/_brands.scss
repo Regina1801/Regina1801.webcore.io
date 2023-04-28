@@ -5,18 +5,20 @@
       grid-template-columns: repeat(3,1fr);
       gap: 16px 24px;
       max-height: 160px;
+		transition: max-height 0.24s ease-in-out;
     }
 
-    @media (min-width: 1120px) {
+    @media (min-width: 1295px) {
       display: grid;
       grid-template-columns: repeat(4,1fr);
       gap: 16px 32px;
-      max-height: 150px;
+      max-height: 160px;
+		transition: max-height 0.24s ease-in-out;
     }
   }
 
   &__item {
-    max-height: 72px;
+    max-height: 70px;
 
     &--hp {
       padding: 10px 16px 10px 10px;

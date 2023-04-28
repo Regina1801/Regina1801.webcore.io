@@ -5,20 +5,22 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 24px 16px;
       max-height: 160px;
+		transition: max-height 0.24s ease-in-out;
     }
-    @media (min-width: 1440px) {
+    @media (min-width: 1120px) { 
       grid-template-columns: repeat(4,1fr);
       gap: 18px 32px;
       max-height: 160px;
+		transition: max-height 0.24s ease-in-out;
     }
   }
   &__item {
     height: 160px;
     @media(min-width: 768px) {
-      width: 224px;
+      //width: 224px;
     }
     @media(min-width: 1440px) {
-      width: 240px;
+      //width: 240px;
     }
     &-title {
       align-self: flex-start;

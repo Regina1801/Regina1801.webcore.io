@@ -3,7 +3,7 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  left: -100%;
+  right: -100%;
   width: 320px;
   border-left: 1px solid #D9FFF5;
   background-color: $white;
@@ -14,11 +14,11 @@
   transition: all 0.3s ease-in-out;
 
   &--open {
-    left: 0;
+    right: 0;
     visibility: visible;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1120px) {
     top: 0;
     bottom: 0;
     width: 440px;
@@ -46,7 +46,7 @@
       visibility: visible;
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1120px) { 
       position: absolute;
       right: 0;
       left: unset;
@@ -82,7 +82,7 @@
       visibility: visible;
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1120px) {
       position: absolute;
       right: 0;
       left: unset;

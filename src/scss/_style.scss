@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 1180px) {
+  @media (min-width: 1180px) {//
     margin: 0 auto;
-    max-width: 1180px;
+    max-width: 1440px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1120px) { 
     flex-direction: row;
-    max-width: 1440px;
+    max-width: 1440px;//
   }
 }
 
@@ -38,7 +38,7 @@
   font-weight: 500;
   letter-spacing: -0.2px;
   line-height: 24px;
-  transition:filter .24s ease;
+  transition: filter .24s ease;
 
   @media (min-width: 768px) {
     display: block;
@@ -59,8 +59,8 @@
 }
 
 .item-btn {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   background: center no-repeat url('../img/go.svg');
 }
 
@@ -84,7 +84,7 @@
 }
 
 .open {
-  max-height: 100% !important;
+  max-height: 1000px !important;
 }
 
 .more-box {
